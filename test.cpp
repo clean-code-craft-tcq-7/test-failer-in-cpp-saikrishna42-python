@@ -1,5 +1,5 @@
 #include"test.h"
- int networkAlertStub(float celcius) 
+ int networkAlert(float celcius) 
     {
         std::cout << "ALERT: Temperature is " << celcius << " celcius.\n";
         // Return 200 for ok
