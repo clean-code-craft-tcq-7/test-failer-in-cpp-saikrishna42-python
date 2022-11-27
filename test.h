@@ -7,11 +7,11 @@
         #define networkAlert    networkAlertStub
 #endif
 
-#define PRODUCTION
-#ifdef TEST
+
+#ifdef PRODUCTION
         //include the header file of networkAlert function
 #endif
 
     
-    int networkAlertStub(float celcius) ;
+    int networkAlert(float celcius) ;
 
