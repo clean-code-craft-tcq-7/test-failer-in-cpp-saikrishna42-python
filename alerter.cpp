@@ -1,19 +1,14 @@
 #include <iostream>
 #include <assert.h>
+#include "test.h"
+
 
 int alertFailureCount = 0;
 
-int networkAlertStub(float celcius) {
-    std::cout << "ALERT: Temperature is " << celcius << " celcius.\n";
-    // Return 200 for ok
-    // Return 500 for not-ok
-    // stub always succeeds and returns 200
-    return 200;
-}
 
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
-    int returnCode = networkAlertStub(celcius);
+    int returnCode = networkAlert(celcius);
     if (returnCode != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
