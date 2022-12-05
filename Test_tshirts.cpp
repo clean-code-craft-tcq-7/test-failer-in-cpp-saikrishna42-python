@@ -1,5 +1,5 @@
 #include <assert.h>
-#include <tshirts.hpp>
+#include "tshirts.hpp"
 
 int main() {
     assert(size(37) == 'S');
