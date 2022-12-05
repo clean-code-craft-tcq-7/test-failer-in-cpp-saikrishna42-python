@@ -2,14 +2,14 @@
 #include "misaligned.hpp"
 
 int main() {
-    int i,j,num;
+       int i,j,num;
     
     //Test CASE 4 | White | Blue
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
     //Sending the same value i as 4 and checking the value
-    num=4;
+    num=4-1;
     i=num/5;
-    j=num%5;
+    j=(num)%5;
     assert(getcolor(i,"Major")=="White");
     assert(getcolor(j,"Minor")=="Brown");
   
@@ -17,9 +17,9 @@ int main() {
   //Test CASE 8 | Red | Green
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
     //Sending the same value i as 8 and checking the value
-     num=8;
+     num=8-1;
     i=num/5;
-    j=num%5;
+    j=(num)%5;
     assert(getcolor(i,"Major")=="Red");
     assert(getcolor(j,"Minor")=="Green");
   
@@ -31,9 +31,8 @@ int main() {
     j=num%5;
     assert(getcolor(i,"Major")=="Black");
     assert(getcolor(j,"Minor")=="Slate");
-  
-    
-  //Test CASE 19 | Yellow | Brown
+
+    //Test CASE 19 | Yellow | Brown
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
     //Sending the same value i as 19 and checking the value
     num=19-1;
@@ -51,9 +50,4 @@ int main() {
     j=num%5;
     assert(getcolor(i,"Major")=="Violet");
     assert(getcolor(j,"Minor")=="Slate");
-  
-  
- 
-    std::cout << "All is well (maybe!)\n";
-    return 0;
 }
