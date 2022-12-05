@@ -11,7 +11,7 @@ int main() {
     i=num/5;
     j=num%5;
     assert(getcolor(i,"Major")=="White");
-    assert(getcolor(j,"Minor")=="Blue");
+    assert(getcolor(j,"Minor")=="Brown");
   
   
   //Test CASE 8 | Red | Green
