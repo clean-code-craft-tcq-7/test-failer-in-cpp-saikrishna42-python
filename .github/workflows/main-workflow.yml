@@ -12,8 +12,8 @@ jobs:
 
     - name: tshirts fail
       run: |
-        g++ -Wall -Wextra -Werror tshirts.cpp -o tshirts.out
-        ./tshirts.out
+        g++ -Wall -Wextra -Werror Test_tshirts.cpp -o Test_tshirts.out
+        ./Test_tshirts.out
 
     - name: misaligned fail
       run: |
