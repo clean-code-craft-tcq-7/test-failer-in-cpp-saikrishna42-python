@@ -17,8 +17,8 @@ jobs:
 
     - name: misaligned fail
       run: |
-        g++ -Wall -Wextra -Werror misaligned.cpp -o misaligned.out
-        ./misaligned.out
+        g++ -Wall -Wextra -Werror misaligned.cpp Test_misaligned.cpp -o Test_misaligned.out
+        ./Test_misaligned.out
     - name: alerter fail
       run: |
         g++ -Wall -Wextra -Werror alerter.cpp -o alerter.out
