@@ -2,7 +2,7 @@
 #include "misaligned.hpp"
 
 int main() {
-    int result = printColorMap();
+    
     
     //Test CASE 4 | White | Blue
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
