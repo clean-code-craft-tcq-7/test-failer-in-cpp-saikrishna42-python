@@ -7,17 +7,17 @@ int main() {
     //Test CASE 4 | White | Blue
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
     //Sending the same value i as 4 and checking the value
-    num=4-1;
+    num=4;
     i=num/5;
     j=num%5;
-    assert(getcolor(i,"Major")=="Violet");
+    assert(getcolor(i,"Major")=="White");
     assert(getcolor(j,"Minor")=="Blue");
   
   
   //Test CASE 8 | Red | Green
     // std::cout << i * 5 + j << " | " << getcolor(i,"Major") << " | " << getcolor(i,"Minor") << "\n"
     //Sending the same value i as 8 and checking the value
-     num=8-1;
+     num=8;
     i=num/5;
     j=num%5;
     assert(getcolor(i,"Major")=="Red");
