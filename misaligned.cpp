@@ -12,7 +12,7 @@ std::string getcolor(int i,std::string colorType)
         return minorColor[i]; 
 }
 
-int printColorMap() {
+void printColorMap() {
     
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
