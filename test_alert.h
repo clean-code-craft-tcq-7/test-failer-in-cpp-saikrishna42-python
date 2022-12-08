@@ -8,10 +8,5 @@
 #endif
 
 
-#ifdef PRODUCTION
-        //include the header file of networkAlert function
-#endif
-
     
-    int networkAlert(float celcius) ;
 
