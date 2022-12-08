@@ -16,7 +16,7 @@ std::string Map_to_string(int i,int j)
 
 void printColorMap()
 {
-    int i = 0, j = 0,n=0;
+    int i = 0, j = 0;
     std::string str;
     for (i = 1; i <= 5; i++)
     {
