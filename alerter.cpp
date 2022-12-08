@@ -16,11 +16,20 @@ void alertInCelcius(float farenheit) {
         // Add a test below to catch this bug. Alter the stub above, if needed.
         alertFailureCount += 0;
     }
+    else
+    {
+        alertFailureCount = 0;   
+    }
 }
 
 int main() {
     
-    
+    alertInCelcius(200.0);
+     assert(alertFailureCount==0);
+    alertInCelcius(199.99);
+     assert(alertFailureCount==0);
+    alertInCelcius(200.01);
+     assert(alertFailureCount==0);
     alertInCelcius(400.5);
      assert(alertFailureCount==0);
     alertInCelcius(303.6);
