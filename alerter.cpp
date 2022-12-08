@@ -1,42 +1,34 @@
 #include <iostream>
 #include <assert.h>
-
+#include "main.hpp"
 
 
 int alertFailureCount = 0;
+#define safe_thr 200
 
- int networkAlert(float celcius) ;
 
 
 void alertInCelcius(float farenheit) {
-    float celcius = (farenheit - 32) * 5 / 9;
+    float celcius = fare_celc_conv(farenheit);
     int returnCode = networkAlert(celcius);
-    if (returnCode != 200) {
+    if (returnCode != safe_thr) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
         // However, this code doesn't count failures!
         // Add a test below to catch this bug. Alter the stub above, if needed.
-        alertFailureCount += 0;
+        alertFailureCount ++;
     }
-    else
-    {
-        alertFailureCount = 0;   
-    }
+    
+     assert(alertFailureCount>0);
 }
 
 int main() {
-    
-    alertInCelcius(200.0);
-     assert(alertFailureCount==0);
-    alertInCelcius(199.99);
-     assert(alertFailureCount==0);
-    alertInCelcius(200.01);
-     assert(alertFailureCount==0);
+       
     alertInCelcius(400.5);
-     assert(alertFailureCount==0);
     alertInCelcius(303.6);
-     assert(alertFailureCount==1);
-    std::cout << alertFailureCount << " alerts failed.\n";
+    alertInCelcius(200.0);
+    alertInCelcius(199.9);
+    alertInCelcius(200.1);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
