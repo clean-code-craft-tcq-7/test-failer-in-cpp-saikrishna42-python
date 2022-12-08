@@ -1,5 +1,5 @@
 #include <iostream>
 #include <string>
 
-std::string getcolor(int i,std::string colorType);
+std::string Map_to_string(int i,int j);
 void printColorMap();
