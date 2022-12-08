@@ -1,5 +1,8 @@
 #include <iostream>
-#include "test_alert.h"
+
+#ifndef PRODUCTION
+        #include "test_alert.h"
+#endif
 
 #ifdef PRODUCTION
         
