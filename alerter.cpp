@@ -1,9 +1,11 @@
 #include <iostream>
 #include <assert.h>
-#include "test.cpp"
+
 
 
 int alertFailureCount = 0;
+
+ int networkAlert(float celcius) ;
 
 
 void alertInCelcius(float farenheit) {
