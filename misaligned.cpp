@@ -1,21 +1,31 @@
-#include <iostream>
-#include <assert.h>
+#include "misaligned.hpp"
 
-int printColorMap() {
+
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int i = 0, j = 0;
-    for(i = 0; i < 5; i++) {
-        for(j = 0; j < 5; j++) {
-            std::cout << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
-        }
-    }
-    return i * j;
+
+
+std::string Map_to_string(int i,int j)
+{
+    std::string str;
+    int n;
+    str=majorColor[i - 1];
+    n=str.size();
+    return std::to_string((((i - 1) * 5)+1 + (j-1))) + " \t| " + majorColor[i - 1] +std::string( 6-n, ' ' )+" | " + minorColor[j - 1];
 }
 
-int main() {
-    int result = printColorMap();
-    assert(result == 25);
-    std::cout << "All is well (maybe!)\n";
-    return 0;
+void printColorMap()
+{
+    int i = 0, j = 0;
+    std::string str;
+    for (i = 1; i <= 5; i++)
+    {
+        for (j = 1; j <= 5; j++)
+        {
+         
+            std::cout<<Map_to_string( i, j)<<std::endl;
+     
+        }
+    }
+        
 }
